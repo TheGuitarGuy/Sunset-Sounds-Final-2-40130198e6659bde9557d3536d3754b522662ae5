@@ -64,7 +64,7 @@ struct Login_Screen: View {
                 .tabItem{
                     
                     Image(systemName: "ellipsis")
-                    Text("More")
+                    Text("More!")
                     
                        
                 }
