@@ -19,39 +19,43 @@ struct Login_Screen: View {
         
         TabView {
             //Rectangle 1
-            VStack {
-                if horizontalSizeClass == .compact{
-                    
+            VStack() {
+                if horizontalSizeClass == .compact && verticalSizeClass == .regular{
                     
                     ZStack{
-                        
-                        
                         Color(red: 23 / 255, green: 30 / 255, blue: 45 / 255).edgesIgnoringSafeArea(.all)
-                        //Sign Up
-                                
-                        //Rectangle 1
-                        Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color(#colorLiteral(red: 0.9490196108818054, green: 0.6352941393852234, blue: 0.364705890417099, alpha: 1)))
-                                .frame(width: 303, height: 79)
-                                .shadow(color: Color(#colorLiteral(red: 0.2541666626930237, green: 0.23298610746860504, blue: 0.23298610746860504, alpha: 0.25)), radius: 1, x: 3, y: 3)
+                        VStack(){
                             //Sign Up
-                                Text("Sign Up").font(.system(size: 20, weight: .medium, design: .rounded)).foregroundColor(Color(.white))
-                                
-                        }
-                        .offset(y:175)
-                        .buttonStyle(ButtonAnimation())
-            
-                        //Have an Account? Sign In
-                        Text("Have an Account? ").font(.system(size: 14, weight: .regular, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).offset(x:-20, y:250)
+                                    
+                            //Rectangle 1
+                            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                                ZStack(){
+                                    RoundedRectangle(cornerRadius: 30)
+                                        
+                                        .fill(Color(#colorLiteral(red: 0.9490196108818054, green: 0.6352941393852234, blue: 0.364705890417099, alpha: 1)))
+                                        .frame(width: 303, height: 79)
+                                        .shadow(color: Color(#colorLiteral(red: 0.2541666626930237, green: 0.23298610746860504, blue: 0.23298610746860504, alpha: 0.25)), radius: 1, x: 3, y: 3)
+                                        Text("Sign Up").font(.system(size: 20, weight: .medium, design: .rounded)).foregroundColor(Color(.white))
+                                }
+                                    
+                            }
+                            .buttonStyle(ButtonAnimation())
+                            HStack{
+                                //Have an Account? Sign In
+                                Text("Have an Account? ").font(.system(size: 14, weight: .regular, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                    
+                                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                                    //Sign In
+                                    Text("Sign In").font(.system(size: 14, weight: .regular, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0, green: 0.54, blue: 0.95, alpha: 1)))
+                                }
+                                .frame(width: 45, height: 25)
+                            }
+                
                             
-                        Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-                            //Sign In
-                            Text("Sign In").font(.system(size: 14, weight: .regular, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0, green: 0.54, blue: 0.95, alpha: 1)))
                         }
-                        .offset(x: 60, y: 250)
-                        
-                        }
+                        .offset(x:0, y: 175)
+
+                    }
                 }
                 
                     
